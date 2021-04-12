@@ -1,0 +1,19 @@
+{
+  "name": "crud-passport-mongo",
+  "version": "1.0.0",
+  "description": "Basic crud using passport for authentication and mongodb",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NovoaMartin/crud-passport-mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NovoaMartin/crud-passport-mongo/issues"
+  },
+  "homepage": "https://github.com/NovoaMartin/crud-passport-mongo#readme"
+}
