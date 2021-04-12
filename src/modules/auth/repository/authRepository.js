@@ -1,9 +1,13 @@
+const { fromModelToEntity } = require('../mapper/accountMapper');
+
 module.exports = class AuthRepository {
-  constructor(accountModel) {
-    this.accountModel = accountModel;
+  constructor(AccountModel) {
+    this.AccountModel = AccountModel;
   }
 
-  save(account) {
-    // TODO
+  async save(acc) {
+    const account = new this.AccountModel(acc);
+    const createdAccount = await account.save();
+    return fromModelToEntity(createdAccount);
   }
 };

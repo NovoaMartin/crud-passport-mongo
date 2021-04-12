@@ -7,24 +7,20 @@ module.exports = class AuthController {
   }
 
   configureRoutes(app) {
-    app.get(`${this.ROUTE}/register`, this.register.bind(this));
+    app.post(`${this.ROUTE}/register`, this.register.bind(this));
   }
 
   async register(req, res) {
-    const errors = [];
+    // const errors = [];
     // TODO
     const account = fromDataToEntity(req.body);
     // TODO
 
     try {
-      await this.authService.save(account);
-      res.json(account);
+      const createdAccount = await this.authService.save(account);
+      return res.json(createdAccount);
     } catch (e) {
-      res.json(e);
+      return res.json(e);
     }
-  }
-
-  login(req, res) {
-
   }
 };
